@@ -1,9 +1,19 @@
+import { Route, Routes } from 'react-router-dom'
+import { Home, ExerciseDetail, NotFound } from './pages'
+import { Navbar, Footer } from './components'
+
 function App() {
-  return (
-    <div className="App">
-      <h1>Hello World</h1>
-    </div>
-  );
+    return (
+        <main className='relative'>
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/exercise/:id" element={<ExerciseDetail />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+            <Footer />
+        </main>
+    )
 }
 
-export default App;
+export default App
