@@ -14,6 +14,9 @@ module.exports = {
             padding: {
                 custom: 'clamp(3rem, 0.4286rem + 8.0357vw, 12rem)',
             },
+            backgroundImage: {
+                'map': "url('./assets/images/map.svg')",
+              },
         },
     },
     plugins: [],
