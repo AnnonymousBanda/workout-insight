@@ -1,27 +1,18 @@
 import { ExerciseCard, ExerciseModal } from './../components/index.js'
-import { useEffect, useState } from 'react'
-import { fetchBodyExercises } from '../utils/fetchData.js'
+import { useState } from 'react'
 
-const ExerciseDetail = ({ bodyPart, setBodyPart }) => {
+const ExerciseDetail = ({ bodyPart, setBodyPart, exercises, setExercises }) => {
+    console.log(bodyPart)
     //setting state hooks
     const [modalIsVisible, setModalIsVisible] = useState(false)
-    const [exercises, setExercises] = useState()
     const [exercise, setExercise] = useState()
-
-    //setting effect hooks
-    useEffect(() => {
-        ;(async () => {
-            const data = await fetchBodyExercises(bodyPart)
-            setExercises(data)
-        })()
-    }, [bodyPart])
-
+    console.log('I am also rendered')
     //returning the JSX
     return (
         <div className="max-container w-full min-h-screen pt-[15rem] pb-[7.5rem]">
             <div className="flex flex-wrap gap-5 justify-center">
                 {exercises &&
-                    exercises.map((exe,index) => (
+                    exercises.map((exe, index) => (
                         <ExerciseCard
                             exercise={exe}
                             key={index}

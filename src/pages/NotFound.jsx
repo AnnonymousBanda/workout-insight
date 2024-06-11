@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 const NotFound = () => {
+    console.log("Not found rendered")
     return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-bg-primary text-text">
             <div className="max-container text-center px-custom">

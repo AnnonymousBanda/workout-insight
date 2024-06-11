@@ -1,14 +1,24 @@
 import Hero from '../assets/images/hero.png'
 import Body from '../assets/images/map.svg'
-import { useEffect } from 'react'
+// import { useEffect } from 'react'
 import ExerciseDetail from './ExerciseDetail'
+// import { fetchBodyExercises } from '../utils/fetchData.js'
 import { Link } from 'react-router-dom'
+import { camelize } from '../utils/stringAPI.js'
 
-const Home = ({ setBodyPart }) => {
-    // useEffect(() => {
-    //     setBodyPart('back')
-    // }, [])
-
+const Home = ({ setBodyPart, bodyPart, exercises, setExercises }) => {
+    const bodyPartsList = [
+        'back',
+        'cardio',
+        'chest',
+        'lower arms',
+        'lower legs',
+        'neck',
+        'shoulders',
+        'upper arms',
+        'upper legs',
+        'waist',
+    ]
     return (
         <div className="w-full">
             <header className="max-container w-full h-svh flex justify-between items-center">
@@ -52,97 +62,29 @@ const Home = ({ setBodyPart }) => {
                         Navigate to the{' '}
                         <span className="text-primary ">BODY Exercises</span>
                     </h3>
+
                     <div className="flex justify-between flex-wrap gap-10">
-                        <button
-                            className="bg-primary text-white"
-                            onClick={(e) => {
-                                setBodyPart('back')
-                                window.location.href = '/exercise'
-                            }}
-                        >
-                            Back
-                        </button>
-                        <button
-                            className="bg-primary text-white"
-                            onClick={(e) => {
-                                setBodyPart('chest')
-                                window.location.href = '/exercise'
-                            }}
-                        >
-                            Chest
-                        </button>
-                        <button
-                            className="bg-primary text-white"
-                            onClick={(e) => {
-                                setBodyPart('lower arms')
-                                window.location.href = '/exercise'
-                            }}
-                        >
-                            Lower arms
-                        </button>
-                        <button
-                            className="bg-primary text-white"
-                            onClick={(e) => {
-                                setBodyPart('lower legs')
-                                window.location.href = '/exercise'
-                            }}
-                        >
-                            Lower legs
-                        </button>
-                        <button
-                            className="bg-primary text-white"
-                            onClick={(e) => {
-                                setBodyPart('neck')
-                                window.location.href = '/exercise'
-                            }}
-                        >
-                            neck
-                        </button>
-                        <button
-                            className="bg-primary text-white"
-                            onClick={(e) => {
-                                setBodyPart('shouders')
-                                window.location.href = '/exercise'
-                            }}
-                        >
-                            shoulders
-                        </button>
-                        <button
-                            className="bg-primary text-white"
-                            onClick={(e) => {
-                                setBodyPart('cardio')
-                                window.location.href = '/exercise'
-                            }}
-                        >
-                            cardio
-                        </button>
-                        <button
-                            className="bg-primary text-white"
-                            onClick={(e) => {
-                                setBodyPart('upper arms')
-                                window.location.href = '/exercise'
-                            }}
-                        >
-                            upper arms
-                        </button>
-                        <button
-                            className="bg-primary text-white"
-                            onClick={(e) => {
-                                setBodyPart('upper legs')
-                                window.location.href = '/exercise'
-                            }}
-                        >
-                            upper legs
-                        </button>
-                        <button
-                            className="bg-primary text-white"
-                            onClick={(e) => {
-                                setBodyPart('waist')
-                                window.location.href = '/exercise'
-                            }}
-                        >
-                            waist
-                        </button>
+                        {bodyPartsList.map((bp) => {
+                            return (
+                                <Link 
+                                    key={bp}
+                                    to="/exercise"
+                                    elemeent={
+                                        <ExerciseDetail exercises={exercises} />
+                                    }
+                                >
+                                    <button
+                                        className="bg-primary text-white"
+                                        onClick={(e) => {
+                                            setBodyPart(`/bodyPart/${bp}`)
+                                            console.log('Changed bodypart')
+                                        }}
+                                    >
+                                        {camelize(bp)}
+                                    </button>
+                                </Link>
+                            )
+                        })}
                     </div>
                 </section>
             </div>

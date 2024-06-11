@@ -7,13 +7,9 @@ const options = {
 }
 
 export const fetchBodyExercises = async (bodyPart) => {
-    const url = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}?limit=10&offset=0`
+    const url = `https://exercisedb.p.rapidapi.com/exercises${bodyPart}?limit=10&offset=0`
     const response = await fetch(url, options)
     const data = await response.json()
+    console.log(data)
     return data
 }
-
-;(async () => {
-    const data = await fetchBodyExercises('back')
-	console.log(data)
-})()
