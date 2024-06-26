@@ -1,12 +1,10 @@
 import { ExerciseCard, ExerciseModal } from './../components/index.js'
 import { useState } from 'react'
 
-const ExerciseDetail = ({ bodyPart, setBodyPart, exercises, setExercises }) => {
-    console.log(bodyPart)
+const ExerciseDetail = ({ exercises }) => {
     //setting state hooks
-    const [modalIsVisible, setModalIsVisible] = useState(false)
-    const [exercise, setExercise] = useState()
-    console.log('I am also rendered')
+    const [modal, setModal] = useState(null)
+
     //returning the JSX
     return (
         <div className="max-container w-full min-h-screen pt-[15rem] pb-[7.5rem]">
@@ -17,22 +15,17 @@ const ExerciseDetail = ({ bodyPart, setBodyPart, exercises, setExercises }) => {
                             exercise={exe}
                             key={index}
                             handleClick={() => {
-                                setModalIsVisible(true)
-                                setExercise(exe)
+                                setModal(true)
+                                // setExercise(exe)
+                                console.log(modal)
+                                setModal(exe)
                                 document.body.style.overflow = 'hidden'
-                                console.log(exercise)
                             }}
                         />
                     ))}
             </div>
 
-            {modalIsVisible && (
-                <ExerciseModal
-                    modalIsVisible={modalIsVisible}
-                    setModalIsVisible={setModalIsVisible}
-                    exercise={exercise}
-                />
-            )}
+            {modal && <ExerciseModal setModal={setModal} modal={modal} />}
         </div>
     )
 }

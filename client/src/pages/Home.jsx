@@ -1,8 +1,6 @@
 import Hero from '../assets/images/hero.png'
 import Body from '../assets/images/map.svg'
-// import { useEffect } from 'react'
 import ExerciseDetail from './ExerciseDetail'
-// import { fetchBodyExercises } from '../utils/fetchData.js'
 import { Link } from 'react-router-dom'
 import { camelize } from '../utils/stringAPI.js'
 

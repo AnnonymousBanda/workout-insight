@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
         <div className="w-full bg-bg-secondary">
-            <footer className="max-container w-full bg-bg-secondary py-[5rem] flex flex-col align items-center justify-center gap-[5rem]"> {/*absolute bottom-[800px]*/}
+            <footer className="max-container w-full bg-bg-secondary py-[3rem] flex flex-col align items-center justify-center gap-[5rem]"> {/*absolute bottom-[800px]*/}
                 <div className="w-full flex align items-start justify-around">
                     <div>
                         <h4>GET IN TOUCH</h4>
