@@ -1,22 +1,6 @@
 import Hero from '../assets/images/hero.png'
-import Body from '../assets/images/map.svg'
-import ExerciseDetail from './ExerciseDetail'
-import { Link } from 'react-router-dom'
-import { camelize } from '../utils/stringAPI.js'
 
 const Home = ({ setBodyPart, bodyPart, exercises, setExercises }) => {
-    const bodyPartsList = [
-        'back',
-        'cardio',
-        'chest',
-        'lower arms',
-        'lower legs',
-        'neck',
-        'shoulders',
-        'upper arms',
-        'upper legs',
-        'waist',
-    ]
     return (
         <div className="w-full">
             <header className="max-container w-full h-svh flex justify-between items-center">
@@ -34,7 +18,7 @@ const Home = ({ setBodyPart, bodyPart, exercises, setExercises }) => {
                 />
             </header>
 
-            <div className="w-full bg-secondary">
+            {/* <div className="w-full bg-secondary">
                 <section
                     id="map"
                     className="max-container w-full px-custom py-[5rem]"
@@ -52,9 +36,9 @@ const Home = ({ setBodyPart, bodyPart, exercises, setExercises }) => {
                         className="m-auto mt-[2rem]"
                     />
                 </section>
-            </div>
+            </div> */}
 
-            <div className="w-full">
+            {/* <div className="w-full">
                 <section className="max-container w-full px-custom py-[6rem]">
                     <h3 className="font-semibold mb-[4rem]">
                         Navigate to the{' '}
@@ -85,7 +69,7 @@ const Home = ({ setBodyPart, bodyPart, exercises, setExercises }) => {
                         })}
                     </div>
                 </section>
-            </div>
+            </div> */}
         </div>
     )
 }
