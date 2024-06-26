@@ -1,5 +1,7 @@
 const fs = require('fs')
 const path = require('path')
+const { catchAsync } = require('./../controllers/error.controller')
+const { hasExpired, updateData, getData } = require('../utils/api.utils')
 
 async function exercise(req, res, next) {
 	const bodyPartListPath = path.join(
@@ -8,11 +10,9 @@ async function exercise(req, res, next) {
 		'data',
 		'bodyPartList.json'
 	)
-
-	const bodyPartList = JSON.parse(fs.readFileSync(bodyPartListPath, 'utf8'))
+	const bodyPartList = await getData(bodyPartListPath)
 
 	const bodyPart = req.params.id
-
 	if (!bodyPartList.includes(bodyPart)) {
 		const error = new Error('Invalid API endpoint')
 		error.status = 404
@@ -21,10 +21,18 @@ async function exercise(req, res, next) {
 	}
 
 	const dataPath = path.join(__dirname, '..', 'data', `${bodyPart}.json`)
+	let data = await getData(dataPath)
 
-	const exercises = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
+	const [{ gifUrl }] = data
+	if (await hasExpired(gifUrl)) {
+		console.log('Data has expired')
+		catchAsync(await updateData(bodyPart))
+		console.log('Data has been updated')
+		data = await getData(dataPath)
+		console.log('Data has been retrieved')
+	}
 
-	return res.json(exercises)
+	return res.json(data)
 }
 
 async function bodyPartList(req, res, next) {

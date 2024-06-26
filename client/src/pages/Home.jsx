@@ -17,59 +17,6 @@ const Home = ({ setBodyPart, bodyPart, exercises, setExercises }) => {
                     className="md:block hidden max-w-[450px] min-w-[30rem]"
                 />
             </header>
-
-            {/* <div className="w-full bg-secondary">
-                <section
-                    id="map"
-                    className="max-container w-full px-custom py-[5rem]"
-                >
-                    <h3 className="text-primary font-semibold">Exercise Map</h3>
-                    <p className="text-[2.2rem] tracking-tighter">
-                        Click on the body parts to explore exercises tailored
-                        for each area
-                        <br />
-                        or search for yourself
-                    </p>
-                    <img
-                        src={Body}
-                        alt="body figure"
-                        className="m-auto mt-[2rem]"
-                    />
-                </section>
-            </div> */}
-
-            {/* <div className="w-full">
-                <section className="max-container w-full px-custom py-[6rem]">
-                    <h3 className="font-semibold mb-[4rem]">
-                        Navigate to the{' '}
-                        <span className="text-primary ">BODY Exercises</span>
-                    </h3>
-
-                    <div className="flex justify-between flex-wrap gap-10">
-                        {bodyPartsList.map((bp) => {
-                            return (
-                                <Link 
-                                    key={bp}
-                                    to="/exercise"
-                                    elemeent={
-                                        <ExerciseDetail exercises={exercises} />
-                                    }
-                                >
-                                    <button
-                                        className="bg-primary text-white"
-                                        onClick={(e) => {
-                                            setBodyPart(`/bodyPart/${bp}`)
-                                            console.log('Changed bodypart')
-                                        }}
-                                    >
-                                        {camelize(bp)}
-                                    </button>
-                                </Link>
-                            )
-                        })}
-                    </div>
-                </section>
-            </div> */}
         </div>
     )
 }
