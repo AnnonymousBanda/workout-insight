@@ -1,5 +1,6 @@
 const express = require('express')
 const cors = require('cors')
+const path = require('path')
 const apiRoutes = require('./routes/api.routes')
 
 const app = express()
@@ -11,12 +12,12 @@ app.use(
 	})
 )
 
-app.use(express.static('src'))
+app.use(express.static(path.join(__dirname, 'src')))
 
 app.use('/api', apiRoutes)
 
-app.route('/').get((req, res) => {
-	return res.sendFile('index.html', { root: 'src' })
+app.route('/*').get((req, res) => {
+	return res.sendFile('index.html', { root: path.join(__dirname, 'src') })
 })
 
 app.use('*', (req, res) => {

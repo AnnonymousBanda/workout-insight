@@ -7,7 +7,7 @@
     "server": "npm start --prefix server",
     "client": "npm start --prefix client",
     "start": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "cross-env BUILD_PATH=../nasa-back-end/src npm run build --prefix nasa-front-end",
+    "build": "cross-env BUILD_PATH=../server/src npm run build --prefix client",
     "deploy": "npm run build && npm run start --prefix server"
   },
   "keywords": [],
