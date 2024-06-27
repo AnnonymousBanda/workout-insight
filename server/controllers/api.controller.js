@@ -3,7 +3,7 @@ const path = require('path')
 const { hasExpired, updateData, getData } = require('../utils/api.utils')
 
 const exercisesURL =
-	'https://exercisedb.p.rapidapi.com/exercises?limit=50&offset=0'
+	'https://exercisedb.p.rapidapi.com/exercises?limit=100&offset=0'
 
 async function allExercise(req, res, next) {
 	const exercisePath = path.join(__dirname, '..', 'data', 'exercises.json')
@@ -44,7 +44,7 @@ async function exercise(req, res, next) {
 
 	const [{ gifUrl }] = data
 	if (await hasExpired(gifUrl)) {
-		const bodyPartURL = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}?limit=10&offset=0`
+		const bodyPartURL = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}?limit=12&offset=0`
 
 		console.log('Data has expired')
 		await updateData(bodyPartURL, dataPath)

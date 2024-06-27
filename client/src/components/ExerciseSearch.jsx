@@ -4,9 +4,22 @@ import fetchData from './../utils/fetchData'
 const ExerciseSearch = () => {
     const [search, setSearch] = useState('')
     const handleSearch = async () => {
-        if (search) {
-            const exercisesData = await fetchData(search)
-            console.log(exercisesData)
+        try {
+            let data = await fetchData('exercise')
+
+            data = data.filter((exercise) => {
+                return (
+                    exercise.name.includes(search) ||
+                    exercise.target.includes(search) ||
+                    exercise.equipment.includes(search) ||
+                    exercise.bodyPart.includes(search) ||
+                    exercise.secondaryMuscles.some((e) => e.includes(search))
+                )
+            })
+
+            console.log(data)
+        } catch (error) {
+            return console.error(error)
         }
     }
     return (
