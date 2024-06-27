@@ -1,6 +1,6 @@
 import Hero from '../assets/images/hero.png'
 
-const Home = ({ setBodyPart, bodyPart, exercises, setExercises }) => {
+const Home = () => {
     return (
         <div className="w-full">
             <header className="max-container w-full h-svh flex justify-between items-center">

@@ -61,10 +61,14 @@
     font-weight: 200;
     
     cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   }
 
   button:hover {
     transform: translateY(-0.1em);
+
+    -webkit-box-shadow: 0px 0px 15px 1px var(--primary);
+    -moz-box-shadow: 0px 0px 15px 1px var(--primary);
+    box-shadow: 0px 0px 15px 1px var(--primary);
   }
 }
