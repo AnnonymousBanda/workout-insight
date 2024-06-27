@@ -8,17 +8,11 @@ const Navbar = () => {
                 <Link to="/">
                     <img src={Logo} alt="site logo" />
                 </Link>
-                <div className="flex gap-[5rem]">
-                    <a
-                        href="#home"
-                        className="text-primary font-semibold text-[2rem]"
-                    >
+                <div className="flex md:gap-[10rem] sm:gap-[7rem] l:gap-[5rem] gap-[3rem]">
+                    <a href="#home" className="text-[2rem] text-primary">
                         Home
                     </a>
-                    <a
-                        href="#exercise"
-                        className="text-primary font-semibold text-[2rem]"
-                    >
+                    <a href="#exercise" className="text-[2rem] text-primary">
                         Exercise
                     </a>
                 </div>

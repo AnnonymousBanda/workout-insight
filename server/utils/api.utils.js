@@ -1,5 +1,4 @@
 const fs = require('fs')
-const path = require('path')
 
 async function hasExpired(url) {
 	const option = {
@@ -11,7 +10,7 @@ async function hasExpired(url) {
 	return Number.parseInt(response.status) !== 200
 }
 
-async function updateData(bodyPart) {
+async function updateData(url, path) {
 	const options = {
 		method: 'GET',
 		headers: {
@@ -20,14 +19,10 @@ async function updateData(bodyPart) {
 		},
 	}
 
-	const url = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}?limit=10&offset=0`
 	response = await fetch(url, options)
 	response = await response.json()
 
-	fs.writeFileSync(
-		path.join(__dirname, '..', 'data', `${bodyPart}.json`),
-		JSON.stringify(response, null, 4)
-	)
+	fs.writeFileSync(path, JSON.stringify(response, null, 4))
 }
 
 async function getData(path) {

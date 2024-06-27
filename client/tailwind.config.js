@@ -3,6 +3,11 @@ module.exports = {
     content: ['./src/**/*.{js,jsx,ts,tsx}'],
     theme: {
         extend: {
+            screens: {
+                l: '425px',
+                m: '375px',
+                s: '320px',
+            },
             colors: {
                 text: 'var(--text)',
                 'bg-primary': 'var(--bg-primary)',
@@ -15,8 +20,8 @@ module.exports = {
                 custom: 'clamp(3rem, 0.4286rem + 8.0357vw, 12rem)',
             },
             backgroundImage: {
-                'map': "url('./assets/images/map.svg')",
-              },
+                map: "url('./assets/images/map.svg')",
+            },
         },
     },
     plugins: [],

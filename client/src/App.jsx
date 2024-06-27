@@ -11,7 +11,7 @@ function App() {
                 <Route path="/Exercise/:id" element={<ExerciseDetail />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
-            <Footer />
+            {/* <Footer /> */}
         </main>
     )
 }
