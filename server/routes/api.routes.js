@@ -1,6 +1,6 @@
 const express = require('express')
 const { exercise, bodyPartList } = require('./../controllers/api.controller')
-const catchAsync = require('./../controllers/error.controller')
+const { catchAsync } = require('./../controllers/error.controller')
 
 const router = express.Router()
 

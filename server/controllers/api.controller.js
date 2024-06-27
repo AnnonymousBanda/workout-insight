@@ -26,7 +26,7 @@ async function exercise(req, res, next) {
 	const [{ gifUrl }] = data
 	if (await hasExpired(gifUrl)) {
 		console.log('Data has expired')
-		catchAsync(await updateData(bodyPart))
+		await updateData(bodyPart)
 		console.log('Data has been updated')
 		data = await getData(dataPath)
 		console.log('Data has been retrieved')

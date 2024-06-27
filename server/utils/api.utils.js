@@ -1,10 +1,12 @@
 const fs = require('fs')
+const path = require('path')
+
 async function hasExpired(url) {
 	const option = {
 		method: 'HEAD',
 	}
 
-	const response = await fetch(url, option)
+	let response = await fetch(url, option)
 
 	return Number.parseInt(response.status) !== 200
 }
@@ -20,10 +22,11 @@ async function updateData(bodyPart) {
 
 	const url = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}?limit=10&offset=0`
 	response = await fetch(url, options)
+	response = await response.json()
 
 	fs.writeFileSync(
-		`./${bodyPart}.json`,
-		JSON.stringify(await response.json(), null, 4)
+		path.join(__dirname, '..', 'data', `${bodyPart}.json`),
+		JSON.stringify(response, null, 4)
 	)
 }
 
