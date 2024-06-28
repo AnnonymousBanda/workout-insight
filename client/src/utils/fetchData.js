@@ -1,8 +1,7 @@
-const PORT = 8000
-const URL = `http://127.0.0.1:${PORT}`
+const API_URL = 'http://localhost:8000'
 
 async function fetchData(route) {
-    let response = await fetch(`${URL}/api/${route}`)
+    let response = await fetch(`${API_URL}/api/${route}`)
     if (response.status !== 200) alert(response.message)
     else {
         response = await response.json()

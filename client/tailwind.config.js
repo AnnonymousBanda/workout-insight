@@ -24,5 +24,15 @@ module.exports = {
             },
         },
     },
-    plugins: [],
+    plugins: [
+        function ({ addUtilities }) {
+            const newUtilities = {
+                '.fit-content': {
+                    width: 'fit-content',
+                    height: 'fit-content',
+                },
+            }
+            addUtilities(newUtilities, ['responsive', 'hover'])
+        },
+    ],
 }

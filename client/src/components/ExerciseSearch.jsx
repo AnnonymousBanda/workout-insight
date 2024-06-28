@@ -2,16 +2,15 @@ import { useState, useEffect } from 'react'
 import { HorizontalScroll } from './index'
 import fetchData from './../utils/fetchData'
 
-const ExerciseSearch = () => {
+const ExerciseSearch = ({ exercises, setExercises, bodyPart, setBodyPart }) => {
     const [search, setSearch] = useState('')
-    const [exercises, setExercises] = useState([])
-    const [bodyPart, setBodyPart] = useState([])
+    const [bodyParts, setBodyParts] = useState([])
 
     useEffect(() => {
         ;(async () => {
             const bodyPartLists = await fetchData('bodyPartList')
 
-            setBodyPart(bodyPartLists)
+            setBodyParts(['all', ...bodyPartLists])
         })()
 
         return () => {}
@@ -35,7 +34,7 @@ const ExerciseSearch = () => {
             setExercises(data)
             console.log(exercises)
         } catch (error) {
-            return console.error(error)
+            return console.log(error)
         }
     }
     return (
@@ -66,9 +65,13 @@ const ExerciseSearch = () => {
                         Search
                     </button>
                 </div>
-				<div>
-						<HorizontalScroll bodyPart={bodyPart}/>
-				</div>
+                <div>
+                    <HorizontalScroll
+                        bodyParts={bodyParts}
+                        bodyPart={bodyPart}
+                        setBodyPart={setBodyPart}
+                    />
+                </div>
             </div>
         </div>
     )
