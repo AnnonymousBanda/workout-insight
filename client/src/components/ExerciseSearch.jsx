@@ -1,8 +1,22 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { HorizontalScroll } from './index'
 import fetchData from './../utils/fetchData'
 
 const ExerciseSearch = () => {
     const [search, setSearch] = useState('')
+    const [exercises, setExercises] = useState([])
+    const [bodyPart, setBodyPart] = useState([])
+
+    useEffect(() => {
+        ;(async () => {
+            const bodyPartLists = await fetchData('bodyPartList')
+
+            setBodyPart(bodyPartLists)
+        })()
+
+        return () => {}
+    }, [])
+
     const handleSearch = async () => {
         try {
             let data = await fetchData('exercise')
@@ -17,7 +31,9 @@ const ExerciseSearch = () => {
                 )
             })
 
-            console.log(data)
+            setSearch('')
+            setExercises(data)
+            console.log(exercises)
         } catch (error) {
             return console.error(error)
         }
@@ -41,15 +57,18 @@ const ExerciseSearch = () => {
                         onKeyDown={(e) => {
                             if (e.key === 'Enter') handleSearch()
                         }}
-                        className="outline-none border-none py-[1rem] px-[2rem] rounded-l-md text-[1.8rem] md:w-[500px]"
+                        className="outline-none border-none s:py-[1rem] s:px-[2rem] rounded-l-md l:text-[1.8rem] md:w-[500px] w-full py-[0.5rem] px-[1rem] text-[1.4rem]"
                     />
                     <button
-                        className="bg-primary text-[1.8rem] py-[1rem] px-[2rem] text-white rounded-r-md"
+                        className="bg-primary l:text-[1.8rem] py-[1rem] px-[2rem] text-white rounded-r-md text-[1.4rem]"
                         onClick={handleSearch}
                     >
                         Search
                     </button>
                 </div>
+				<div>
+						<HorizontalScroll bodyPart={bodyPart}/>
+				</div>
             </div>
         </div>
     )
