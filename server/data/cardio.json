@@ -2,7 +2,7 @@
     {
         "bodyPart": "cardio",
         "equipment": "body weight",
-        "gifUrl": "https://v2.exercisedb.io/image/d2CvhUl45YNqlD",
+        "gifUrl": "https://v2.exercisedb.io/image/zJicVl-mlEZ9Rt",
         "id": "3220",
         "name": "astride jumps (male)",
         "target": "cardiovascular system",
@@ -23,7 +23,7 @@
     {
         "bodyPart": "cardio",
         "equipment": "body weight",
-        "gifUrl": "https://v2.exercisedb.io/image/kgHsZNDz-SEgcH",
+        "gifUrl": "https://v2.exercisedb.io/image/jao-HtVTv2mv6W",
         "id": "3672",
         "name": "back and forth step",
         "target": "cardiovascular system",
@@ -45,7 +45,7 @@
     {
         "bodyPart": "cardio",
         "equipment": "body weight",
-        "gifUrl": "https://v2.exercisedb.io/image/kgvAsiblI7UtW6",
+        "gifUrl": "https://v2.exercisedb.io/image/dBi-kdWU1ffbtd",
         "id": "3360",
         "name": "bear crawl",
         "target": "cardiovascular system",
@@ -66,7 +66,7 @@
     {
         "bodyPart": "cardio",
         "equipment": "body weight",
-        "gifUrl": "https://v2.exercisedb.io/image/uCS7JBpYXR3Vd2",
+        "gifUrl": "https://v2.exercisedb.io/image/37CQ44Fxb8Xp7u",
         "id": "1160",
         "name": "burpee",
         "target": "cardiovascular system",
@@ -90,7 +90,7 @@
     {
         "bodyPart": "cardio",
         "equipment": "leverage machine",
-        "gifUrl": "https://v2.exercisedb.io/image/VuzKzEAfLRl9x9",
+        "gifUrl": "https://v2.exercisedb.io/image/dokkpSxPdA2e1D",
         "id": "2331",
         "name": "cycle cross trainer",
         "target": "cardiovascular system",
@@ -110,7 +110,7 @@
     {
         "bodyPart": "cardio",
         "equipment": "dumbbell",
-        "gifUrl": "https://v2.exercisedb.io/image/FrvWnOdKHJThQO",
+        "gifUrl": "https://v2.exercisedb.io/image/hEN8z41O-ExVTb",
         "id": "1201",
         "name": "dumbbell burpee",
         "target": "cardiovascular system",
@@ -136,7 +136,7 @@
     {
         "bodyPart": "cardio",
         "equipment": "body weight",
-        "gifUrl": "https://v2.exercisedb.io/image/fjfouKmqFrn9Wc",
+        "gifUrl": "https://v2.exercisedb.io/image/w82NpE5zSE-fVW",
         "id": "3221",
         "name": "half knee bends (male)",
         "target": "cardiovascular system",
@@ -156,7 +156,7 @@
     {
         "bodyPart": "cardio",
         "equipment": "body weight",
-        "gifUrl": "https://v2.exercisedb.io/image/7rWJjU-wpZ3PDC",
+        "gifUrl": "https://v2.exercisedb.io/image/GCZIXw9xXR9Cux",
         "id": "3636",
         "name": "high knee against wall",
         "target": "cardiovascular system",
@@ -179,7 +179,7 @@
     {
         "bodyPart": "cardio",
         "equipment": "body weight",
-        "gifUrl": "https://v2.exercisedb.io/image/YM8o8tGtnsNzUn",
+        "gifUrl": "https://v2.exercisedb.io/image/B1QHHLblylQHqA",
         "id": "0501",
         "name": "jack burpee",
         "target": "cardiovascular system",
@@ -204,7 +204,7 @@
     {
         "bodyPart": "cardio",
         "equipment": "body weight",
-        "gifUrl": "https://v2.exercisedb.io/image/kXyRkoMULqmSHW",
+        "gifUrl": "https://v2.exercisedb.io/image/Mm46zJzHDNjlc-",
         "id": "3224",
         "name": "jack jump (male)",
         "target": "cardiovascular system",
@@ -216,6 +216,47 @@
             "Stand with your feet together and your arms by your sides.",
             "Jump up, spreading your feet apart and raising your arms above your head.",
             "As you land, quickly jump back to the starting position.",
+            "Repeat for the desired number of repetitions."
+        ]
+    },
+    {
+        "bodyPart": "cardio",
+        "equipment": "rope",
+        "gifUrl": "https://v2.exercisedb.io/image/dflOqt1p4-x3u0",
+        "id": "2612",
+        "name": "jump rope",
+        "target": "cardiovascular system",
+        "secondaryMuscles": [
+            "calves",
+            "quadriceps",
+            "hamstrings",
+            "glutes"
+        ],
+        "instructions": [
+            "Hold the handles of the jump rope with your hands, palms facing inward.",
+            "Stand with your feet shoulder-width apart and knees slightly bent.",
+            "Swing the rope over your head and jump over it as it comes towards your feet.",
+            "Land softly on the balls of your feet and repeat the jump as the rope comes around again.",
+            "Continue jumping for the desired duration or number of repetitions."
+        ]
+    },
+    {
+        "bodyPart": "cardio",
+        "equipment": "body weight",
+        "gifUrl": "https://v2.exercisedb.io/image/iAXRiT9lgz-NC6",
+        "id": "0630",
+        "name": "mountain climber",
+        "target": "cardiovascular system",
+        "secondaryMuscles": [
+            "core",
+            "shoulders",
+            "triceps"
+        ],
+        "instructions": [
+            "Start in a high plank position with your hands directly under your shoulders and your body in a straight line.",
+            "Engage your core and bring your right knee towards your chest, then quickly switch and bring your left knee towards your chest.",
+            "Continue alternating legs in a running motion, keeping your hips low and your core engaged.",
+            "Maintain a steady pace and breathe evenly throughout the exercise.",
             "Repeat for the desired number of repetitions."
         ]
     }

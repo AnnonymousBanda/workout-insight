@@ -2,7 +2,7 @@
     {
         "bodyPart": "lower arms",
         "equipment": "band",
-        "gifUrl": "https://v2.exercisedb.io/image/0SlYoh4Y6KtVGx",
+        "gifUrl": "https://v2.exercisedb.io/image/Waw1434mC3ozwz",
         "id": "0994",
         "name": "band reverse wrist curl",
         "target": "forearms",
@@ -21,7 +21,7 @@
     {
         "bodyPart": "lower arms",
         "equipment": "band",
-        "gifUrl": "https://v2.exercisedb.io/image/81YkWm0YznLn4x",
+        "gifUrl": "https://v2.exercisedb.io/image/SnguMdprKxZv44",
         "id": "1016",
         "name": "band wrist curl",
         "target": "forearms",
@@ -40,7 +40,7 @@
     {
         "bodyPart": "lower arms",
         "equipment": "barbell",
-        "gifUrl": "https://v2.exercisedb.io/image/ycTkscaJNfSx4U",
+        "gifUrl": "https://v2.exercisedb.io/image/yxsfx8XuIYP0LJ",
         "id": "1411",
         "name": "barbell palms down wrist curl over a bench",
         "target": "forearms",
@@ -59,7 +59,7 @@
     {
         "bodyPart": "lower arms",
         "equipment": "barbell",
-        "gifUrl": "https://v2.exercisedb.io/image/2XcluzzONRRsyA",
+        "gifUrl": "https://v2.exercisedb.io/image/u9SosYH3ZjMSl2",
         "id": "1412",
         "name": "barbell palms up wrist curl over a bench",
         "target": "forearms",
@@ -78,7 +78,7 @@
     {
         "bodyPart": "lower arms",
         "equipment": "barbell",
-        "gifUrl": "https://v2.exercisedb.io/image/xrFgJszFfBVXUi",
+        "gifUrl": "https://v2.exercisedb.io/image/tAaBSOk2UB7Eez",
         "id": "0079",
         "name": "barbell revers wrist curl v. 2",
         "target": "forearms",
@@ -98,7 +98,7 @@
     {
         "bodyPart": "lower arms",
         "equipment": "barbell",
-        "gifUrl": "https://v2.exercisedb.io/image/-QAcfO4Xqpk-Ll",
+        "gifUrl": "https://v2.exercisedb.io/image/-StYLXkH4BeR6e",
         "id": "0082",
         "name": "barbell reverse wrist curl",
         "target": "forearms",
@@ -117,7 +117,7 @@
     {
         "bodyPart": "lower arms",
         "equipment": "barbell",
-        "gifUrl": "https://v2.exercisedb.io/image/WV1uACYGQsuXEu",
+        "gifUrl": "https://v2.exercisedb.io/image/AufTAMt9ZVDAVX",
         "id": "0104",
         "name": "barbell standing back wrist curl",
         "target": "forearms",
@@ -136,7 +136,7 @@
     {
         "bodyPart": "lower arms",
         "equipment": "barbell",
-        "gifUrl": "https://v2.exercisedb.io/image/TOtgqQCiM30YU1",
+        "gifUrl": "https://v2.exercisedb.io/image/LH4IpeUiDNuKjV",
         "id": "0126",
         "name": "barbell wrist curl",
         "target": "forearms",
@@ -155,7 +155,7 @@
     {
         "bodyPart": "lower arms",
         "equipment": "barbell",
-        "gifUrl": "https://v2.exercisedb.io/image/qMwBnncW-tXKqx",
+        "gifUrl": "https://v2.exercisedb.io/image/8iOG87dTk4zfwQ",
         "id": "0125",
         "name": "barbell wrist curl v. 2",
         "target": "forearms",
@@ -175,7 +175,7 @@
     {
         "bodyPart": "lower arms",
         "equipment": "cable",
-        "gifUrl": "https://v2.exercisedb.io/image/eyCZSNWhpWSNwz",
+        "gifUrl": "https://v2.exercisedb.io/image/Syh53tRGGdL23j",
         "id": "0210",
         "name": "cable reverse wrist curl",
         "target": "forearms",
@@ -189,6 +189,47 @@
             "Rest your forearms on your thighs, with your wrists hanging off the edge.",
             "Keeping your forearms stationary, exhale and curl your wrists upward as far as possible.",
             "Pause for a moment at the top, then inhale and slowly lower your wrists back down to the starting position.",
+            "Repeat for the desired number of repetitions."
+        ]
+    },
+    {
+        "bodyPart": "lower arms",
+        "equipment": "cable",
+        "gifUrl": "https://v2.exercisedb.io/image/OXHrss273sJzk8",
+        "id": "0224",
+        "name": "cable standing back wrist curl",
+        "target": "forearms",
+        "secondaryMuscles": [
+            "biceps",
+            "brachialis"
+        ],
+        "instructions": [
+            "Stand facing a cable machine with your feet shoulder-width apart.",
+            "Hold the cable handle with an overhand grip, palms facing down.",
+            "Keep your arms straight and your elbows close to your sides.",
+            "Slowly curl your wrists upward, bringing the cable handle towards your body.",
+            "Pause for a moment at the top, then slowly lower the cable handle back to the starting position.",
+            "Repeat for the desired number of repetitions."
+        ]
+    },
+    {
+        "bodyPart": "lower arms",
+        "equipment": "cable",
+        "gifUrl": "https://v2.exercisedb.io/image/gCJe5nWrJhzduN",
+        "id": "0247",
+        "name": "cable wrist curl",
+        "target": "forearms",
+        "secondaryMuscles": [
+            "biceps",
+            "brachialis"
+        ],
+        "instructions": [
+            "Attach a straight bar to a low pulley cable machine.",
+            "Stand facing the machine with your feet shoulder-width apart.",
+            "Grasp the bar with an underhand grip, palms facing up, and your hands shoulder-width apart.",
+            "Rest your forearms on a bench or pad, with your wrists hanging off the edge.",
+            "Keeping your forearms stationary, exhale and curl your wrists upward as far as possible.",
+            "Pause for a moment at the top, then inhale and slowly lower the bar back to the starting position.",
             "Repeat for the desired number of repetitions."
         ]
     }

@@ -4,6 +4,7 @@ import ExerciseSearch from './ExerciseSearch'
 import HorizontalScroll from './HorizontalScroll'
 import BodyPart from './BodyPart'
 import Exercise from './Exercise'
+import ExerciseCard from './ExerciseCard'
 import Footer from './Footer'
 
-export { Navbar, Footer, Header, ExerciseSearch, Exercise, HorizontalScroll, BodyPart }
+export { Navbar, Footer, Header, ExerciseSearch, Exercise, ExerciseCard, HorizontalScroll, BodyPart }

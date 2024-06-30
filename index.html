@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			body {
+				background-color: #f3f4f6;
+				font-family: 'Arial', sans-serif;
+			}
+
+			.card {
+				background-color: #fff;
+				border-radius: 12px;
+				overflow: hidden;
+				transition:
+					transform 0.3s,
+					box-shadow 0.3s;
+				width: 300px;
+				margin: 20px;
+				text-align: center;
+			}
+
+			.card:hover {
+			}
+
+			.card-image {
+				width: 100%;
+				height: auto;
+			}
+
+			.card-content {
+				padding: 20px;
+			}
+
+			.tags {
+				margin-bottom: 10px;
+			}
+
+			.tag {
+				display: inline-block;
+				padding: 5px 10px;
+				border-radius: 50px;
+				font-size: 12px;
+				color: #fff;
+				margin-right: 5px;
+			}
+
+			.tag-red {
+				background-color: #ff6b6b;
+			}
+
+			.tag-blue {
+				background-color: #48bb78;
+			}
+
+			.card-title {
+				font-size: 18px;
+				font-weight: bold;
+				color: #333;
+				margin: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="card">
+			<img
+				src="https://v2.exercisedb.io/image/9qQ1noIyCyMcJE"
+				alt="Exercise Image"
+				class="card-image"
+			/>
+			<div class="card-content">
+				<div class="tags">
+					<span class="tag tag-red">waist</span>
+					<span class="tag tag-blue">abs</span>
+				</div>
+				<h3 class="card-title">3/4 Sit-up</h3>
+			</div>
+		</div>
+	</body>
+</html>

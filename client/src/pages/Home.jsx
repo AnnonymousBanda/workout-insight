@@ -13,7 +13,11 @@ const Home = () => {
                 bodyPart={bodyPart}
                 setBodyPart={setBodyPart}
             />
-            {/* <Exercise /> */}
+            <Exercise
+                exercises={exercises}
+                setExercises={setExercises}
+                bodyPart={bodyPart}
+            />
         </div>
     )
 }

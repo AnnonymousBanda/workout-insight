@@ -2,7 +2,7 @@
     {
         "bodyPart": "chest",
         "equipment": "body weight",
-        "gifUrl": "https://v2.exercisedb.io/image/O3yCPtGzs1KMGo",
+        "gifUrl": "https://v2.exercisedb.io/image/Ge9Gu4UZkvAHXj",
         "id": "3294",
         "name": "archer push up",
         "target": "pectorals",
@@ -23,7 +23,7 @@
     {
         "bodyPart": "chest",
         "equipment": "leverage machine",
-        "gifUrl": "https://v2.exercisedb.io/image/SQIKdivq3Vw-Tz",
+        "gifUrl": "https://v2.exercisedb.io/image/9XiVp02ty70YoN",
         "id": "0009",
         "name": "assisted chest dip (kneeling)",
         "target": "pectorals",
@@ -42,7 +42,7 @@
     {
         "bodyPart": "chest",
         "equipment": "assisted",
-        "gifUrl": "https://v2.exercisedb.io/image/QVVSZ2-CK0JKw4",
+        "gifUrl": "https://v2.exercisedb.io/image/H36libOINfiCYW",
         "id": "1716",
         "name": "assisted seated pectoralis major stretch with stability ball",
         "target": "pectorals",
@@ -61,7 +61,7 @@
     {
         "bodyPart": "chest",
         "equipment": "leverage machine",
-        "gifUrl": "https://v2.exercisedb.io/image/szf4arnq1rrMMT",
+        "gifUrl": "https://v2.exercisedb.io/image/WcRKpbyrOtCdPm",
         "id": "2364",
         "name": "assisted wide-grip chest dip (kneeling)",
         "target": "pectorals",
@@ -80,7 +80,7 @@
     {
         "bodyPart": "chest",
         "equipment": "band",
-        "gifUrl": "https://v2.exercisedb.io/image/3fAvFd4RniAFtv",
+        "gifUrl": "https://v2.exercisedb.io/image/dHcdW85rFS5fhh",
         "id": "1254",
         "name": "band bench press",
         "target": "pectorals",
@@ -99,7 +99,7 @@
     {
         "bodyPart": "chest",
         "equipment": "band",
-        "gifUrl": "https://v2.exercisedb.io/image/Lb5hTiY5KkGGX4",
+        "gifUrl": "https://v2.exercisedb.io/image/gTKi5Ieu9mXwbf",
         "id": "0989",
         "name": "band one arm twisting chest press",
         "target": "pectorals",
@@ -121,7 +121,7 @@
     {
         "bodyPart": "chest",
         "equipment": "barbell",
-        "gifUrl": "https://v2.exercisedb.io/image/eEToZsnxWL0dDe",
+        "gifUrl": "https://v2.exercisedb.io/image/XwN8RhHdyjGbiA",
         "id": "0025",
         "name": "barbell bench press",
         "target": "pectorals",
@@ -142,7 +142,7 @@
     {
         "bodyPart": "chest",
         "equipment": "barbell",
-        "gifUrl": "https://v2.exercisedb.io/image/vEuQLzb5-fMOvI",
+        "gifUrl": "https://v2.exercisedb.io/image/G58H6TK2vm1YwH",
         "id": "0033",
         "name": "barbell decline bench press",
         "target": "pectorals",
@@ -161,7 +161,7 @@
     {
         "bodyPart": "chest",
         "equipment": "barbell",
-        "gifUrl": "https://v2.exercisedb.io/image/4go0W89W32xbT4",
+        "gifUrl": "https://v2.exercisedb.io/image/u-Ix1BbgXSIoLb",
         "id": "1255",
         "name": "barbell decline pullover",
         "target": "pectorals",
@@ -181,7 +181,7 @@
     {
         "bodyPart": "chest",
         "equipment": "barbell",
-        "gifUrl": "https://v2.exercisedb.io/image/qS2GSRCHQuncjG",
+        "gifUrl": "https://v2.exercisedb.io/image/SFvrDiAfGkufgw",
         "id": "0036",
         "name": "barbell decline wide-grip press",
         "target": "pectorals",
@@ -193,6 +193,46 @@
             "Lie on a decline bench with your feet secured and your head lower than your hips.",
             "Grasp the barbell with a wide grip, slightly wider than shoulder-width apart.",
             "Lower the barbell to your chest, keeping your elbows out to the sides.",
+            "Push the barbell back up to the starting position, fully extending your arms.",
+            "Repeat for the desired number of repetitions."
+        ]
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "barbell",
+        "gifUrl": "https://v2.exercisedb.io/image/XOjDmuUh7uHuEs",
+        "id": "0040",
+        "name": "barbell front raise and pullover",
+        "target": "pectorals",
+        "secondaryMuscles": [
+            "deltoids",
+            "triceps"
+        ],
+        "instructions": [
+            "Stand with your feet shoulder-width apart and hold a barbell with an overhand grip, palms facing down.",
+            "Keep your arms straight and raise the barbell in front of you until it reaches shoulder height.",
+            "Pause for a moment at the top, then slowly lower the barbell back down to the starting position.",
+            "Next, lower the barbell behind your head, keeping your arms straight.",
+            "Pause for a moment at the bottom, then raise the barbell back up to the starting position.",
+            "Repeat for the desired number of repetitions."
+        ]
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "barbell",
+        "gifUrl": "https://v2.exercisedb.io/image/1qArnf-i0mKhVQ",
+        "id": "0045",
+        "name": "barbell guillotine bench press",
+        "target": "pectorals",
+        "secondaryMuscles": [
+            "shoulders",
+            "triceps"
+        ],
+        "instructions": [
+            "Lie flat on a bench with your feet flat on the ground and your back pressed against the bench.",
+            "Grasp the barbell with an overhand grip, slightly wider than shoulder-width apart.",
+            "Lower the barbell slowly towards your neck, keeping your elbows pointed outwards.",
+            "Pause for a moment when the barbell is just above your neck.",
             "Push the barbell back up to the starting position, fully extending your arms.",
             "Repeat for the desired number of repetitions."
         ]

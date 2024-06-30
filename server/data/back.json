@@ -2,7 +2,7 @@
     {
         "bodyPart": "back",
         "equipment": "cable",
-        "gifUrl": "https://v2.exercisedb.io/image/GNEohy8HSAXtpj",
+        "gifUrl": "https://v2.exercisedb.io/image/qO5eZTGDIk9uNN",
         "id": "0007",
         "name": "alternate lateral pulldown",
         "target": "lats",
@@ -21,7 +21,7 @@
     {
         "bodyPart": "back",
         "equipment": "body weight",
-        "gifUrl": "https://v2.exercisedb.io/image/k8bMo63uBUIlEe",
+        "gifUrl": "https://v2.exercisedb.io/image/s1edZ8bNKT2WEW",
         "id": "3293",
         "name": "archer pull up",
         "target": "lats",
@@ -41,7 +41,7 @@
     {
         "bodyPart": "back",
         "equipment": "leverage machine",
-        "gifUrl": "https://v2.exercisedb.io/image/FFCEWnZZxX-g6k",
+        "gifUrl": "https://v2.exercisedb.io/image/rPODRH685Itzkt",
         "id": "0015",
         "name": "assisted parallel close grip pull-up",
         "target": "lats",
@@ -62,7 +62,7 @@
     {
         "bodyPart": "back",
         "equipment": "leverage machine",
-        "gifUrl": "https://v2.exercisedb.io/image/kNaL4nVDP3rNhF",
+        "gifUrl": "https://v2.exercisedb.io/image/Eyn2m1HOvSuPVx",
         "id": "0017",
         "name": "assisted pull-up",
         "target": "lats",
@@ -83,7 +83,7 @@
     {
         "bodyPart": "back",
         "equipment": "leverage machine",
-        "gifUrl": "https://v2.exercisedb.io/image/CNRuIteVlbIg9R",
+        "gifUrl": "https://v2.exercisedb.io/image/3xuMtA32OB9w3A",
         "id": "1431",
         "name": "assisted standing chin-up",
         "target": "lats",
@@ -104,7 +104,7 @@
     {
         "bodyPart": "back",
         "equipment": "leverage machine",
-        "gifUrl": "https://v2.exercisedb.io/image/Lk5YwOhijRaFyU",
+        "gifUrl": "https://v2.exercisedb.io/image/wDmaPxaK-fKjwd",
         "id": "1432",
         "name": "assisted standing pull-up",
         "target": "lats",
@@ -125,7 +125,7 @@
     {
         "bodyPart": "back",
         "equipment": "stability ball",
-        "gifUrl": "https://v2.exercisedb.io/image/RevniRLopwIFTG",
+        "gifUrl": "https://v2.exercisedb.io/image/LNL0rqY4iYsieL",
         "id": "1314",
         "name": "back extension on exercise ball",
         "target": "spine",
@@ -144,7 +144,7 @@
     {
         "bodyPart": "back",
         "equipment": "body weight",
-        "gifUrl": "https://v2.exercisedb.io/image/mOgg5psDyCeY9k",
+        "gifUrl": "https://v2.exercisedb.io/image/SIpFZB1EUSzP-Y",
         "id": "3297",
         "name": "back lever",
         "target": "upper back",
@@ -165,7 +165,7 @@
     {
         "bodyPart": "back",
         "equipment": "body weight",
-        "gifUrl": "https://v2.exercisedb.io/image/vDccObO09wPxmQ",
+        "gifUrl": "https://v2.exercisedb.io/image/2Jz5A3vmqs9SPc",
         "id": "1405",
         "name": "back pec stretch",
         "target": "lats",
@@ -186,7 +186,7 @@
     {
         "bodyPart": "back",
         "equipment": "band",
-        "gifUrl": "https://v2.exercisedb.io/image/DU2Z72b0C-NuaO",
+        "gifUrl": "https://v2.exercisedb.io/image/g1PQ-onGv3Co7o",
         "id": "0970",
         "name": "band assisted pull-up",
         "target": "lats",
@@ -200,6 +200,48 @@
             "Hang with your arms fully extended, keeping your core engaged and your shoulders down and back.",
             "Pull your body up towards the bar by squeezing your shoulder blades together and driving your elbows down towards your hips.",
             "Continue pulling until your chin is above the bar, then slowly lower yourself back down to the starting position.",
+            "Repeat for the desired number of repetitions."
+        ]
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "band",
+        "gifUrl": "https://v2.exercisedb.io/image/8NGKU8cn5vdZ6g",
+        "id": "0974",
+        "name": "band close-grip pulldown",
+        "target": "lats",
+        "secondaryMuscles": [
+            "biceps",
+            "forearms"
+        ],
+        "instructions": [
+            "Attach the band to a high anchor point, such as a pull-up bar or sturdy beam.",
+            "Stand facing the anchor point and grab the band with an underhand grip, hands shoulder-width apart.",
+            "Step back to create tension in the band, keeping your feet hip-width apart.",
+            "Engage your core and keep your back straight as you pull the band down towards your chest, squeezing your shoulder blades together.",
+            "Pause for a moment at the bottom of the movement, then slowly release the band back to the starting position.",
+            "Repeat for the desired number of repetitions."
+        ]
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "band",
+        "gifUrl": "https://v2.exercisedb.io/image/IeoCcU5tKT9cGe",
+        "id": "3117",
+        "name": "band fixed back close grip pulldown",
+        "target": "lats",
+        "secondaryMuscles": [
+            "biceps",
+            "forearms"
+        ],
+        "instructions": [
+            "Attach the band to a fixed point above you, such as a pull-up bar or sturdy beam.",
+            "Sit down on a bench or chair facing the band, with your feet flat on the ground and your knees bent.",
+            "Grasp the band with a close grip, palms facing towards you.",
+            "Keep your back straight and engage your core.",
+            "Pull the band down towards your chest, squeezing your shoulder blades together.",
+            "Pause for a moment at the bottom of the movement, feeling the contraction in your lats.",
+            "Slowly release the band back to the starting position, maintaining control throughout the movement.",
             "Repeat for the desired number of repetitions."
         ]
     }

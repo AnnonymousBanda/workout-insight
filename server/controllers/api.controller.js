@@ -3,7 +3,7 @@ const path = require('path')
 const { hasExpired, updateData, getData } = require('../utils/api.utils')
 
 const exercisesURL =
-	'https://exercisedb.p.rapidapi.com/exercises?limit=100&offset=0'
+	'https://exercisedb.p.rapidapi.com/exercises?limit=30&offset=0'
 
 async function allExercise(req, res, next) {
 	const exercisePath = path.join(__dirname, '..', 'data', 'exercises.json')

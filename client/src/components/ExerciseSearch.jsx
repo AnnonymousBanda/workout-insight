@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { HorizontalScroll } from './index'
-import fetchData from './../utils/fetchData'
+import { fetchData, filterData } from '../utils/index'
 
 const ExerciseSearch = ({ exercises, setExercises, bodyPart, setBodyPart }) => {
     const [search, setSearch] = useState('')
@@ -20,15 +20,7 @@ const ExerciseSearch = ({ exercises, setExercises, bodyPart, setBodyPart }) => {
         try {
             let data = await fetchData('exercise')
 
-            data = data.filter((exercise) => {
-                return (
-                    exercise.name.includes(search) ||
-                    exercise.target.includes(search) ||
-                    exercise.equipment.includes(search) ||
-                    exercise.bodyPart.includes(search) ||
-                    exercise.secondaryMuscles.some((e) => e.includes(search))
-                )
-            })
+            data = filterData(data, search)
 
             setSearch('')
             setExercises(data)
