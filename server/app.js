@@ -16,7 +16,7 @@ app.use(
 
 app.use(express.static(path.join(__dirname, 'src')))
 
-app.use('/api', apiRoutes)
+app.use('/api/exercise', apiRoutes)
 
 app.route('/*').get((req, res) => {
 	return res.sendFile('index.html', { root: path.join(__dirname, 'src') })
