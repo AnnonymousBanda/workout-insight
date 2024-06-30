@@ -4,73 +4,73 @@ const { hasExpired, updateData, getData } = require('../utils/api.utils')
 
 const exercisesURL =
 	'https://exercisedb.p.rapidapi.com/exercises?limit=30&offset=0'
+const exercisePath = path.join(__dirname, '..', 'data', 'exercises.json')
+let exercises = getData(exercisePath)
 
-async function allExercise(req, res, next) {
-	const exercisePath = path.join(__dirname, '..', 'data', 'exercises.json')
+const bodyPartList = [
+	'back',
+	'cardio',
+	'chest',
+	'lower arms',
+	'lower legs',
+	'neck',
+	'shoulders',
+	'upper arms',
+	'upper legs',
+	'waist',
+]
 
-	const exercises = await getData(exercisePath)
-
-	const [{ gifUrl }] = exercises
-	if (await hasExpired(gifUrl)) {
-		console.log('Data has expired')
-		await updateData(exercisesURL, exercisePath)
-		console.log('Data has been updated')
-		exercises = await getData(exercisePath)
-		console.log('Data has been retrieved')
+async function exerciseByID(req, res, next) {
+	const { id } = req.query
+	if (!id) {
+		const error = new Error('Invalid API endpoint')
+		error.status = 404
+		error.name = 'InvalidEndpoint'
+		return next(error)
 	}
-
-	return res.json(exercises)
+	const fetchedData = exercises.find((exercise) => exercise.id === id)
+	if (!fetchedData) {
+		const error = new Error('Exercise not found')
+		error.status = 404
+		error.name = 'ExerciseNotFound'
+		return next(error)
+	}
+	return res.json(fetchedData)
 }
 
-async function exercise(req, res, next) {
-	const bodyPartListPath = path.join(
-		__dirname,
-		'..',
-		'data',
-		'bodyPartList.json'
-	)
-	const bodyPartList = await getData(bodyPartListPath)
-
+async function exerciseByBodyPart(req, res, next) {
 	const bodyPart = req.params.id
-	if (!bodyPartList.includes(bodyPart)) {
+	if (!bodyPartList.includes(bodyPart) && bodyPart !== 'all') {
 		const error = new Error('Invalid API endpoint')
 		error.status = 404
 		error.name = 'InvalidEndpoint'
 		return next(error)
 	}
 
-	const dataPath = path.join(__dirname, '..', 'data', `${bodyPart}.json`)
-	let data = await getData(dataPath)
-
-	const [{ gifUrl }] = data
+	const [{ gifUrl }] = exercises
 	if (await hasExpired(gifUrl)) {
-		const bodyPartURL = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}?limit=12&offset=0`
-
 		console.log('Data has expired')
-		await updateData(bodyPartURL, dataPath)
+		await updateData(exercisesURL, exercisePath)
 		console.log('Data has been updated')
-		data = await getData(dataPath)
+		exercises = getData(exercisePath)
 		console.log('Data has been retrieved')
 	}
 
-	return res.json(data)
+	if (bodyPart === 'all') {
+		return res.json(exercises)
+	}
+
+	return res.json(
+		exercises.filter((exercise) => exercise.bodyPart === bodyPart)
+	)
 }
 
-async function bodyPartList(req, res, next) {
-	const bodyPartListPath = path.join(
-		__dirname,
-		'..',
-		'data',
-		'bodyPartList.json'
-	)
-
-	const bodyPartList = JSON.parse(fs.readFileSync(bodyPartListPath, 'utf8'))
-
+function bodyPart(req, res, next) {
 	return res.json(bodyPartList)
 }
 
 module.exports = {
-	allExercise,
-	exercise,
-	bodyPartList,
+	exerciseByID,
+	exerciseByBodyPart,
+	bodyPart,
 }

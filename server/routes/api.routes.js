@@ -1,18 +1,12 @@
 const express = require('express')
-const {
-	allExercise,
-	exercise,
-	bodyPartList,
-} = require('./../controllers/api.controller')
+const { exerciseByID, exerciseByBodyPart, bodyPart } = require('./../controllers/api.controller')
 const { catchAsync } = require('./../controllers/error.controller')
 
 const router = express.Router()
 
-router.route('/exercise').get(catchAsync(allExercise))
+router.route('/exercise').get(catchAsync(exerciseByID))
+router.route('/exercise/:id').get(catchAsync(exerciseByBodyPart))
 
-router.route('/exercise/all').get(catchAsync(allExercise))
-router.route('/exercise/:id').get(catchAsync(exercise))
-
-router.route('/bodyPartList').get(catchAsync(bodyPartList))
+router.route('/bodyPartList').get(catchAsync(bodyPart))
 
 module.exports = router

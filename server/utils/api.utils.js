@@ -25,7 +25,7 @@ async function updateData(url, path) {
 	fs.writeFileSync(path, JSON.stringify(response, null, 4))
 }
 
-async function getData(path) {
+function getData(path) {
 	const data = JSON.parse(fs.readFileSync(path, 'utf8'))
 
 	return data
