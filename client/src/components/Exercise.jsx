@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { ExerciseCard } from './index'
 import { fetchData, filterData } from '../utils'
 
@@ -7,11 +7,10 @@ const Exercise = ({ exercises, setExercises, bodyPart }) => {
         ;(async () => {
             let data = await fetchData(`exercise/${bodyPart}`)
 
-            // if (bodyPart !== 'all') data = filterData(data, bodyPart)
+            if (bodyPart !== 'all') data = filterData(data, bodyPart)
 
             setExercises(data)
         })()
-        console.log('I am useEffect')
 
         return () => {}
     }, [bodyPart])

@@ -1,7 +1,8 @@
-import React from 'react'
+import { useParams } from "react-router-dom"
 
 const ExerciseDetail = () => {
-    return <div>ExerciseDetail</div>
+    const { id } = useParams()
+    return <div>{id}</div>
 }
 
 export default ExerciseDetail

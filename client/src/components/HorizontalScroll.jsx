@@ -3,7 +3,7 @@ import { BodyPart } from './index'
 import LeftArrow from './../assets/icons/left-arrow.png'
 import RightArrow from './../assets/icons/right-arrow.png'
 
-const HorizontalScroll = ({ bodyParts, bodyPart, setBodyPart }) => {
+const HorizontalScroll = ({ bodyParts, bodyPart, setBodyPart, categoryRef }) => {
     const scrollRef = useRef(null)
 
     const handleScroll = (direction) => {
@@ -28,6 +28,7 @@ const HorizontalScroll = ({ bodyParts, bodyPart, setBodyPart }) => {
                             part={part}
                             bodyPart={bodyPart}
                             setBodyPart={setBodyPart}
+                            categoryRef={categoryRef}
                         />
                     </div>
                 ))}

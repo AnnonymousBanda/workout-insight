@@ -1,5 +1,5 @@
 function filterData(data, search) {
-    data = data.filter((exercise) => {
+    return data.filter((exercise) => {
         return (
             exercise.name.includes(search) ||
             exercise.target.includes(search) ||

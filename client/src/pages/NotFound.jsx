@@ -11,7 +11,7 @@ const NotFound = () => {
                     removed.
                 </p>
                 <Link to="/">
-                    <button className="bg-primary text-bg-primary">
+                    <button className="bg-primary text-bg-primary py-[1rem] px-[1.5rem] rounded-lg">
                         Go to Homepage
                     </button>
                 </Link>

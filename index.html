@@ -1,82 +1,88 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<style>
-			body {
-				background-color: #f3f4f6;
-				font-family: 'Arial', sans-serif;
-			}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Footer Component</title>
+    <style>
+        .footer {
+            background-color: #1a202c;
+            color: #cbd5e0;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
 
-			.card {
-				background-color: #fff;
-				border-radius: 12px;
-				overflow: hidden;
-				transition:
-					transform 0.3s,
-					box-shadow 0.3s;
-				width: 300px;
-				margin: 20px;
-				text-align: center;
-			}
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
 
-			.card:hover {
-			}
+        .footer-link {
+            color: #cbd5e0;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
 
-			.card-image {
-				width: 100%;
-				height: auto;
-			}
+        .footer-link:hover {
+            color: #ffffff;
+        }
 
-			.card-content {
-				padding: 20px;
-			}
+        .footer-social {
+            margin-top: 2rem;
+        }
 
-			.tags {
-				margin-bottom: 10px;
-			}
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #2d3748;
+            color: #cbd5e0;
+            border-radius: 50%;
+            margin: 0 0.5rem;
+            transition: background-color 0.2s, color 0.2s;
+        }
 
-			.tag {
-				display: inline-block;
-				padding: 5px 10px;
-				border-radius: 50px;
-				font-size: 12px;
-				color: #fff;
-				margin-right: 5px;
-			}
+        .social-icon:hover {
+            background-color: #ffffff;
+            color: #1a202c;
+        }
 
-			.tag-red {
-				background-color: #ff6b6b;
-			}
-
-			.tag-blue {
-				background-color: #48bb78;
-			}
-
-			.card-title {
-				font-size: 18px;
-				font-weight: bold;
-				color: #333;
-				margin: 0;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="card">
-			<img
-				src="https://v2.exercisedb.io/image/9qQ1noIyCyMcJE"
-				alt="Exercise Image"
-				class="card-image"
-			/>
-			<div class="card-content">
-				<div class="tags">
-					<span class="tag tag-red">waist</span>
-					<span class="tag tag-blue">abs</span>
-				</div>
-				<h3 class="card-title">3/4 Sit-up</h3>
-			</div>
-		</div>
-	</body>
+        .footer-text {
+            margin-top: 2rem;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#" class="footer-link">Home</a>
+            <a href="#" class="footer-link">About</a>
+            <a href="#" class="footer-link">Services</a>
+            <a href="#" class="footer-link">Contact</a>
+        </div>
+        <div class="footer-social">
+            <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        <div class="footer-text">
+            &copy; 2024 Your Company. All rights reserved.
+        </div>
+    </footer>
+</body>
 </html>

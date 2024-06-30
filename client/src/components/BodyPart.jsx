@@ -1,8 +1,9 @@
 import icon from './../assets/icons/gym.png'
 
-const BodyPart = ({ part, bodyPart, setBodyPart }) => {
+const BodyPart = ({ part, bodyPart, setBodyPart, categoryRef }) => {
     return (
-        <div
+        <div 
+            ref={categoryRef}
             className="flex flex-col items-center flex-shrink-0 cursor-pointer"
             onClick={(e) => setBodyPart(part)}
         >

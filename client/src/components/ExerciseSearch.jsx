@@ -1,10 +1,11 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { HorizontalScroll } from './index'
 import { fetchData, filterData } from '../utils/index'
 
 const ExerciseSearch = ({ exercises, setExercises, bodyPart, setBodyPart }) => {
     const [search, setSearch] = useState('')
     const [bodyParts, setBodyParts] = useState([])
+    const categoryRef = useRef(null)
 
     useEffect(() => {
         ;(async () => {
@@ -18,13 +19,14 @@ const ExerciseSearch = ({ exercises, setExercises, bodyPart, setBodyPart }) => {
 
     const handleSearch = async () => {
         try {
-            let data = await fetchData('exercise')
+            let data = await fetchData('exercise/all')
 
             data = filterData(data, search)
 
             setSearch('')
             setExercises(data)
-            console.log(exercises)
+
+            // categoryRef.current.name.border = 'none'
         } catch (error) {
             return console.log(error)
         }
@@ -62,6 +64,7 @@ const ExerciseSearch = ({ exercises, setExercises, bodyPart, setBodyPart }) => {
                         bodyParts={bodyParts}
                         bodyPart={bodyPart}
                         setBodyPart={setBodyPart}
+                        categoryRef={categoryRef}
                     />
                 </div>
             </div>
