@@ -9,8 +9,8 @@ const { catchAsync } = require('./../controllers/error.controller')
 const router = express.Router()
 
 router.route('/').get(catchAsync(exerciseByID))
-router.route('/:id').get(catchAsync(exerciseByBodyPart))
 
 router.route('/bodyPartList').get(catchAsync(bodyPart))
+router.route('/:id').get(catchAsync(exerciseByBodyPart))
 
 module.exports = router

@@ -19,7 +19,7 @@ const ExerciseSearch = ({ exercises, setExercises, bodyPart, setBodyPart }) => {
 
     const handleSearch = async () => {
         try {
-            let data = await fetchData('exercise/all')
+            let data = await fetchData('all')
 
             data = filterData(data, search)
 

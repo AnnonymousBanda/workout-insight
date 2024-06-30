@@ -14,10 +14,10 @@ const ExerciseCard = ({ exercise }) => {
             </Link>
             <div className="flex gap-[2rem] flex-wrap justify-center">
                 <p className="text-[1.4rem] py-2 px-8 rounded-full bg-red-500 text-white ">
-                    {exercise.bodyPart}
+                    {camelize(exercise.bodyPart)}
                 </p>
                 <p className="text-[1.4rem] py-2 px-8 rounded-full bg-slate-500 text-white ">
-                    {exercise.target}
+                    {camelize(exercise.target)}
                 </p>
             </div>
             <h4 className="break-normal w-[80%] text-center">
