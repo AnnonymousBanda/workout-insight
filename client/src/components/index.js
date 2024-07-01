@@ -5,6 +5,8 @@ import HorizontalScroll from './HorizontalScroll'
 import BodyPart from './BodyPart'
 import Exercise from './Exercise'
 import ExerciseCard from './ExerciseCard'
+import ExerciseDetailView from './ExerciseDetailView'
+import ExerciseSuggestion from './ExerciseSuggestion'
 import Footer from './Footer'
 
-export { Navbar, Footer, Header, ExerciseSearch, Exercise, ExerciseCard, HorizontalScroll, BodyPart }
+export { Navbar, Footer, Header, ExerciseSearch, Exercise, ExerciseCard, HorizontalScroll, ExerciseDetailView, ExerciseSuggestion, BodyPart }

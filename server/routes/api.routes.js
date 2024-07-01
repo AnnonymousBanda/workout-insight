@@ -10,7 +10,7 @@ const router = express.Router()
 
 router.route('/').get(catchAsync(exerciseByID))
 
-router.route('/bodyPartList').get(catchAsync(bodyPart))
+router.route('/bodyPartList').get(bodyPart)
 router.route('/:id').get(catchAsync(exerciseByBodyPart))
 
 module.exports = router

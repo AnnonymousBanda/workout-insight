@@ -5,7 +5,7 @@ import mail from '../assets/icons/mail.svg'
 
 const Footer = () => {
     return (
-        <footer className="py-[5rem] bg-bg-secondary flex flex-col items-center justify-center">
+        <footer className="py-[5rem] bg-bg-secondary flex flex-col gap-[1rem] items-center justify-center">
             <div>
                 <p className="text-[1.6rem]">
                     &copy;Ankit Bhagat aka AnnonymousBanda
@@ -14,7 +14,7 @@ const Footer = () => {
                     <img
                         src={mail}
                         alt="mail logo"
-                        className="w-[5rem] m-auto"
+                        className="w-[3rem] m-auto"
                     />
                 </a>
             </div>
