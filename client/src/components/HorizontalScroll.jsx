@@ -52,11 +52,11 @@ function HorizontalScroll({ bodyParts, setBodyPart }) {
             <ReactPaginate
                 nextLabel={<img src={rightArrow} alt="right-arrow" />}
                 previousLabel={<img src={leftArrow} alt="left-arrow" />}
+                className="flex justify-center items-center gap-[10px] text-[1.6rem]"
                 onPageChange={handlePageClick}
                 pageRangeDisplayed={5}
                 pageCount={pageCount}
                 renderOnZeroPageCount={null}
-                className="flex justify-center items-center gap-[10px] text-[1.6rem]"
             />
         </>
     )

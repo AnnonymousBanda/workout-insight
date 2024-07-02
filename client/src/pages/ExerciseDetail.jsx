@@ -33,8 +33,8 @@ const ExerciseDetail = () => {
             {exercise ? (
                 <>
                     <ExerciseDetailView exercise={exercise} />
-                    {/* <ExerciseSuggestion basis="equipment" exercise={exercise}/>
-                    <ExerciseSuggestion basis="secondaryMuscles" exercise={exercise}/> */}
+                    <ExerciseSuggestion basis="equipment" exercise={exercise}/>
+                    <ExerciseSuggestion basis="secondaryMuscles" exercise={exercise}/>
                 </>
             ) : (
                 <div>No exercise data available.</div>
