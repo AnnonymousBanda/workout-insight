@@ -26,12 +26,12 @@ function Items({ currentItems, setBodyPart }) {
     )
 }
 
-function HorizontalScroll({ bodyParts, bodyPart, setBodyPart }) {
+function HorizontalScroll({ bodyParts, setBodyPart }) {
     const [itemOffset, setItemOffset] = useState(0)
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
     const itemsPerPage = windowWidth > 1024 ? 4 : windowWidth > 640 ? 3 : 2
-
+    
     window.addEventListener('resize', () => {
         setWindowWidth(window.innerWidth)
     })
@@ -51,10 +51,10 @@ function HorizontalScroll({ bodyParts, bodyPart, setBodyPart }) {
             <Items currentItems={currentItems} setBodyPart={setBodyPart} />
             <ReactPaginate
                 nextLabel={<img src={rightArrow} alt="right-arrow" />}
+                previousLabel={<img src={leftArrow} alt="left-arrow" />}
                 onPageChange={handlePageClick}
                 pageRangeDisplayed={5}
                 pageCount={pageCount}
-                previousLabel={<img src={leftArrow} alt="left-arrow" />}
                 renderOnZeroPageCount={null}
                 className="flex justify-center items-center gap-[10px] text-[1.6rem]"
             />
