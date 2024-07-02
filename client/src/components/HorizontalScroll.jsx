@@ -1,53 +1,64 @@
-import { useRef } from 'react'
-import { BodyPart } from './index'
-import LeftArrow from './../assets/icons/left-arrow.png'
-import RightArrow from './../assets/icons/right-arrow.png'
+import leftArrow from './../assets/icons/left-arrow.png'
+import rightArrow from './../assets/icons/right-arrow.png'
+import gym from './../assets/icons/gym.png'
+import ReactPaginate from 'react-paginate'
+import { useState } from 'react'
 
-const HorizontalScroll = ({ bodyParts, bodyPart, setBodyPart, categoryRef }) => {
-    const scrollRef = useRef(null)
+function Items({ currentItems, setBodyPart }) {
+    return (
+        <div className="flex flex-row items-center justify-between py-[6rem]">
+            {currentItems &&
+                currentItems.map((item) => (
+                    <div
+                        key={item}
+                        className="cursor-pointer flex flex-col items-center justify-center w-[100px]"
+                        onClick={(e) => {
+                            setBodyPart(item)
+                        }}
+                    >
+                        <img src={gym} alt="gym" className="w-[5rem]" />
+                        <p className="text-[1.8rem] font-semibold text-center w-full">
+                            {item}
+                        </p>
+                    </div>
+                ))}
+        </div>
+    )
+}
 
-    const handleScroll = (direction) => {
-        // const xCoords = scrollRef.current.getBoundingClientRect().left
-        // let newCoords = xCoords
-        if (direction === 'left') {
-            scrollRef.current.style.transform = `translateX(-100px)`
-        } else {
-            scrollRef.current.style.transform = `translateX(100px)`
-        }
+function HorizontalScroll({ bodyParts, bodyPart, setBodyPart }) {
+    const [itemOffset, setItemOffset] = useState(0)
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+    const itemsPerPage = windowWidth > 1024 ? 4 : windowWidth > 640 ? 3 : 2
+
+    window.addEventListener('resize', () => {
+        setWindowWidth(window.innerWidth)
+    })
+
+    const endOffset = itemOffset + itemsPerPage
+    const currentItems = bodyParts.slice(itemOffset, endOffset)
+    const pageCount = Math.ceil(bodyParts.length / itemsPerPage)
+
+    const handlePageClick = (event) => {
+        const newOffset = (event.selected * itemsPerPage) % bodyParts.length
+
+        setItemOffset(newOffset)
     }
 
     return (
-        <div className="pt-[5rem] overflow-x-hidden">
-            <div className="w-[220%] flex flex-row" ref={scrollRef}>
-                {bodyParts.map((part) => (
-                    <div
-                        key={part}
-                        className="w-[20%] flex justify-center items-center"
-                    >
-                        <BodyPart
-                            part={part}
-                            bodyPart={bodyPart}
-                            setBodyPart={setBodyPart}
-                            categoryRef={categoryRef}
-                        />
-                    </div>
-                ))}
-            </div>
-            <div className="flex flex-row gap-[50px] justify-center items-center mt-[50px]">
-                <img
-                    src={LeftArrow}
-                    alt="left arrow"
-                    className="cursor-pointer"
-                    onClick={() => handleScroll('left')}
-                />
-                <img
-                    src={RightArrow}
-                    alt="right arrow"
-                    className="cursor-pointer"
-                    onClick={() => handleScroll('right')}
-                />
-            </div>
-        </div>
+        <>
+            <Items currentItems={currentItems} setBodyPart={setBodyPart} />
+            <ReactPaginate
+                nextLabel={<img src={rightArrow} alt="right-arrow" />}
+                onPageChange={handlePageClick}
+                pageRangeDisplayed={5}
+                pageCount={pageCount}
+                previousLabel={<img src={leftArrow} alt="left-arrow" />}
+                renderOnZeroPageCount={null}
+                className="flex justify-center items-center gap-[10px] text-[1.6rem]"
+            />
+        </>
     )
 }
 
