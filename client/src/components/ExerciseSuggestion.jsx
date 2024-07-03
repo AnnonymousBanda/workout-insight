@@ -55,7 +55,7 @@ function Items({ currentItems, windowWidth }) {
     return (
         <div
             className={
-                'flex flex-row items-start py-[2rem] ' +
+                'flex flex-row items-start gap-[2rem] py-[2rem] ' +
                 (windowWidth < 768 ? 'justify-center' : 'justify-between ')
             }
         >
