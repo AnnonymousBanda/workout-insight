@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Header, ExerciseSearch, Exercise } from './../components/index'
 
-const Home = () => {
+const Home = ({ exerciseRef }) => {
     const [exercises, setExercises] = useState([])
     const [bodyPart, setBodyPart] = useState('all')
     return (
@@ -12,6 +12,7 @@ const Home = () => {
                 setExercises={setExercises}
                 bodyPart={bodyPart}
                 setBodyPart={setBodyPart}
+                exerciseRef={exerciseRef}
             />
             <Exercise
                 exercises={exercises}

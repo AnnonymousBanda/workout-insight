@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { HorizontalScroll } from './index'
 import { fetchData, filterData } from '../utils/index'
 
-const ExerciseSearch = ({ setExercises, setBodyPart }) => {
+const ExerciseSearch = ({ setExercises, setBodyPart, exerciseRef }) => {
     const [search, setSearch] = useState('')
     const [bodyParts, setBodyParts] = useState([])
 
@@ -29,7 +29,7 @@ const ExerciseSearch = ({ setExercises, setBodyPart }) => {
         }
     }
     return (
-        <div className="w-full bg-bg-secondary">
+        <div className="w-full bg-bg-secondary" ref={exerciseRef}>
             <div className="max-container w-full py-[7rem]">
                 <h2 className="text-center leading-[4rem] mb-[7rem]">
                     Explore&nbsp;Different
