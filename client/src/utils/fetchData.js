@@ -1,4 +1,6 @@
-const API_URL = 'http://localhost:8000/api/exercise'
+console.log(process.env.API_URL)
+
+const API_URL = `${process.env.API_URL||"http://localhost:8000"}/api/exercise`
 
 async function fetchData(route) {
     let response = await fetch(`${API_URL}/${route}`)

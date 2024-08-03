@@ -2,17 +2,26 @@ const express = require('express')
 const cors = require('cors')
 const path = require('path')
 const apiRoutes = require('./routes/api.routes')
+const morgan = require('morgan')
+const rateLimit = require('express-rate-limit')
 
 require('dotenv').config()
 
 const app = express()
 
-app.use(
-	cors({
-		origin: process.env.CORS_ORIGIN || 'http://localhost:8000',
-		optionsSuccessStatus: 200,
-	})
-)
+const corsOptions = {
+	origin: process.env.CORS_ORIGIN,
+	optionsSuccessStatus: 200,
+}
+const limiterOptions = {
+	windowMs: 10 * 60 * 1000,
+	max: 100,
+	message: 'Too many requests from this IP, please try again later.',
+}
+
+app.use(rateLimit(limiterOptions))
+app.use(cors(corsOptions))
+app.use(morgan('dev'))
 
 app.use(express.static(path.join(__dirname, 'src')))
 
